@@ -5,14 +5,13 @@ A lightweight casino bot for Slack. Players earn virtual coins, play coin flip, 
 ## Features
 
 - Persistent balance for every Slack user
-- Starting balance of 100 coins
+- Starting balance of 1000 coins
 - Daily reward of 1,000 coins
 - Work reward between 100 and 500 coins
 - One-hour work cooldown
 - Twenty-four-hour daily reward cooldown
 - Coin flip betting with heads or tails
-- Shared top-ten leaderboard
-- JSON file storage with atomic writes
+- Shared top-5 leaderboard
 - Slack Socket Mode, so no public web server is required
 
 ## Commands
@@ -22,10 +21,9 @@ A lightweight casino bot for Slack. Players earn virtual coins, play coin flip, 
 | `/casino-balance` | `/casino-balance` | Show your current balance |
 | `/casino-daily` | `/casino-daily` | Claim the daily reward |
 | `/casino-work` | `/casino-work` | Earn coins from work |
-| `/casino-coin-flip` | `/casino-coin-flip heads 25` | Bet on heads or tails |
+| `/casino-coin-flip` | `/casino-coin-flip heads 25` | Bet on heads or tails along with amount you bet|
 | `/casino-leaderboard` | `/casino-leaderboard` | Show the ten richest players |
 
-Coin flip bets must be whole numbers from 1 to 500,000 and cannot exceed the player's balance. A winning bet adds the wager to the balance; a losing bet subtracts it.
 
 ## Requirements
 
@@ -79,9 +77,9 @@ bot is running!
 
 ## Data Storage
 
-Player data is stored locally in `data/users.json`. Each player record includes their Slack user ID, username, balance, cooldown timestamps, games played, wins, and total winnings.
+Player data is stored locally in `data/users.json`. Each player record includes their Slack user ID, username, balance, cooldown timestamps.
 
-The `data` directory is created automatically when the first player uses a command. Back up `data/users.json` if balances need to survive machine migration. For multi-instance deployments or production use, replace this JSON store with a database such as SQLite or PostgreSQL.
+
 
 ## Development
 
@@ -90,7 +88,3 @@ The project currently has no automated test suite. Check JavaScript syntax with:
 ```bash
 node --check index.js
 ```
-
-## License
-
-This project is available under the license included in the repository.
