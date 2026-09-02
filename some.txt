@@ -1,0 +1,3 @@
+staring balance is 1000 coins
+daily give you 1000 coins
+work give you some random amount of coins from [100,500]
