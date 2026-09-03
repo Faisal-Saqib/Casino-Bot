@@ -2,10 +2,10 @@
 
 A lightweight casino bot for Slack. Players earn virtual coins by play coin flip , daily login , working once a hour, and compete on a shared leaderboard.
 
-#Commands Supported
+# Commands Supported
 
 | Command | Usage Example | Explanation |
-|:-------------------|:------------------------|:-------------|
+|-|-|-|
 |/casino-coin-flip|/casino-coin-flip heads 100|Betting some amount of coins on outcome of a coin toss double the amount on winning and losing makes it zero|
 |/casino-balance|/casino-balance|Used to  your balance|
 |/casino-leaderboard|/casino-leaderboard|Show the top 5 user according to balance along with your rank|
